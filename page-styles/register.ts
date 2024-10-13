@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import { ButtonStyles } from "@/constants/theme";
 // import { Colors } from "@/constants/theme";
 
 export default StyleSheet.create({
@@ -17,7 +18,7 @@ export default StyleSheet.create({
   input: {
     width: "100%",
     height: 40,
-    borderColor: "#CCCCCC",
+    borderColor: "#023047",
     borderWidth: 1,
     borderRadius: 5,
     paddingHorizontal: 10,
@@ -43,5 +44,11 @@ export default StyleSheet.create({
     color: "#FFFFFF",
     fontSize: 16,
     fontWeight: "bold",
+  },
+  cadastrarButton: {
+    ...ButtonStyles.secondary,
+    width: 326,
+    marginBottom: 15,
+    marginTop: 30,
   },
 });

@@ -67,8 +67,8 @@ export default function Register() {
         onChangeText={setSenha}
         secureTextEntry
       />
-      <TouchableOpacity style={styles.button} onPress={handleRegister}>
-        <Text style={styles.buttonText}>Cadastrar</Text>
+      <TouchableOpacity onPress={handleRegister}>
+        <Text style={styles.cadastrarButton}>Cadastrar</Text>
       </TouchableOpacity>
     </View>
   );

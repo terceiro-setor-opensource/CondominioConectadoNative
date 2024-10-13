@@ -3,6 +3,13 @@ import { Colors } from "@/constants/theme";
 import { ButtonStyles } from "@/constants/theme";
 
 export default StyleSheet.create({
+  scrollContainer: {
+    flexGrow: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    padding: 16,
+    backgroundColor: Colors.white,
+  },
   container: {
     flex: 1,
     backgroundColor: Colors.white,
