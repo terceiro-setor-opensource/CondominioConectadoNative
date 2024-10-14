@@ -1,6 +1,14 @@
 import React, { useState } from "react";
-import { View, Text, TextInput, TouchableOpacity, Alert, Image } from "react-native";
-import { Link } from "expo-router";
+import {
+  View,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  Alert,
+  Image,
+} from "react-native";
+import { useNavigation } from "@react-navigation/native";
+
 import styles from "@/page-styles/register";
 
 export default function Register() {
@@ -11,20 +19,26 @@ export default function Register() {
   const [apartamento, setApartamento] = useState("");
   const [senha, setSenha] = useState("");
 
+  const navigation = useNavigation<any>();
+
   const handleRegister = () => {
     if (!nome || !email || !whatsapp || !bloco || !apartamento || !senha) {
       Alert.alert("Erro", "Por favor, preencha todos os campos obrigatórios.");
       return;
     }
-    Alert.alert("Sucesso", "Usuário cadastrado com sucesso!");
+    Alert.alert("Sucesso", "Usuário cadastrado com sucesso!", [
+      {
+        text: "OK",
+        onPress: () => {
+          navigation.navigate("login");
+        },
+      },
+    ]);
   };
 
   return (
     <View style={styles.container}>
-      <Image
-        style={styles.logo}
-        source={require("@/assets/images/logo.png")}
-      />
+      <Image style={styles.logo} source={require("@/assets/images/logo.png")} />
       <TextInput
         style={styles.input}
         placeholder="Nome *"
