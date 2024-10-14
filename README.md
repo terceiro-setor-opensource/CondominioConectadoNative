@@ -2,6 +2,13 @@
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
+## Membros do grupo:
+
+- Alexandre Roberto Pereira da Silva
+- Romulo Amorim de Lacerda
+- Jilvan Pereira de Sousa Junior
+- Rubens
+
 ## Get started
 
 1. Install dependencies
